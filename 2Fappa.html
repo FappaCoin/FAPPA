@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAPPA ($FAPPA) - Inspired by the iconic Twitter cat that saw and heard too much. Learn more about our project and community.">
+    <meta name="keywords" content="FAPPA, Crypto, Cat, Meme Token, Blockchain, Community, Fun">
+    <meta name="author" content="FAPPA Team">
+    <title>FAPPA ($FAPPA)</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: white;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080, 0 0 60px #ff0080;
+            margin-bottom: 10px;
+            animation: glow 3s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080, 0 0 60px #ff0080;
+            }
+            50% {
+                text-shadow: 0 0 30px #ff33aa, 0 0 50px #ff33aa, 0 0 70px #ff33aa;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin: 10px 0;
+        }
+
+        .stats {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .links {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            border: 2px solid #ff0080;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .links a:hover {
+            background: #ff0080;
+            color: white;
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 0 20px #ff0080;
+        }
+
+        .cat-image {
+            position: absolute;
+            width: 150px;
+            animation: move-random 15s infinite linear;
+        }
+
+        @keyframes move-random {
+            0% {
+                top: 10%;
+                left: 5%;
+            }
+            25% {
+                top: 30%;
+                left: 80%;
+            }
+            50% {
+                top: 70%;
+                left: 40%;
+            }
+            75% {
+                top: 20%;
+                left: 15%;
+            }
+            100% {
+                top: 10%;
+                left: 5%;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .neon-border {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 4px double transparent;
+            border-radius: 20px;
+            background-image: linear-gradient(#0d0d0d, #0d0d0d), linear-gradient(135deg, #ff0080, #33ccff);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .links a {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            .cat-image {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links a {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .cat-image {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <h1>FAPPA ($FAPPA)</h1>
+    <p>Inspired by the Twitter cat that saw and heard too much.</p>
+    <div class="stats">
+        <p>SUPPLY: 1B | LIQUIDITY: Locked | BURN: Active</p>
+        <p>CA: Placeholder (To Be Updated)</p>
+    </div>
+    <div class="links">
+        <a href="https://t.me/placeholder" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://x.com/C0RPSEGASM/status/1872454255086645464" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://placeholder.com/chart" target="_blank" rel="noopener">Chart</a>
+    </div>
+    <img class="cat-image" src="https://pbs.twimg.com/media/GfxLOCpWYAACGDM?format=jpg&name=large" alt="Floating Cat">
+    <footer>
+        &copy; 2025 FAPPA. All rights reserved. | This is not financial advice. DYOR.
+    </footer>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 150 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 },
+                "line_linked": { "enable": true, "distance": 150 },
+                "color": { "value": "#ff33aa" }
+            }
+        });
+    </script>
+</body>
+</html>
