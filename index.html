@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FAPPA ($FAPPA) - Inspired by the iconic Twitter cat that saw and heard too much. Learn more about our project and community.">
-    <meta name="keywords" content="FAPPA, Crypto, Cat, Meme Token, Blockchain, Community, Fun">
-    <meta name="author" content="FAPPA Team">
     <title>FAPPA ($FAPPA)</title>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -15,98 +12,138 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
             height: 100vh;
-            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            background-color: #0d0d0d;
             color: white;
             overflow: hidden;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         #particles-js {
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: transparent;
+            background-color: #0d0d0d;
             z-index: -1;
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             text-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080, 0 0 60px #ff0080;
-            margin-bottom: 10px;
-            animation: glow 3s infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% {
-                text-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080, 0 0 60px #ff0080;
-            }
-            50% {
-                text-shadow: 0 0 30px #ff33aa, 0 0 50px #ff33aa, 0 0 70px #ff33aa;
-            }
-        }
-
-        p {
-            font-size: 1.4rem;
-            margin: 10px 0;
+            margin-top: 100px;
         }
 
         .stats {
-            font-size: 1.2rem;
             margin: 20px 0;
-            line-height: 1.5;
+            font-size: 1.5rem;
         }
 
         .links {
             margin-top: 40px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            gap: 20px;
         }
 
         .links a {
             text-decoration: none;
             color: white;
             border: 2px solid #ff0080;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 25px;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
+            transition: all 0.4s;
+            font-size: 1.2rem;
         }
 
         .links a:hover {
             background: #ff0080;
             color: white;
-            transform: scale(1.1) rotate(2deg);
+            transform: scale(1.2);
             box-shadow: 0 0 20px #ff0080;
         }
 
         .cat-image {
             position: absolute;
             width: 150px;
-            animation: move-random 15s infinite linear;
+            height: auto;
+            animation: move-random-1 20s infinite ease-in-out;
         }
 
-        @keyframes move-random {
+        .cat-image-2 {
+            position: absolute;
+            width: 120px;
+            height: auto;
+            animation: move-random-2 22s infinite alternate ease-in-out;
+        }
+
+        .cat-image-3 {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            animation: move-random-3 18s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes move-random-1 {
+            0% {
+                top: 5%;
+                left: 10%;
+            }
+            25% {
+                top: 30%;
+                left: 70%;
+            }
+            50% {
+                top: 60%;
+                left: 50%;
+            }
+            75% {
+                top: 40%;
+                left: 20%;
+            }
+            100% {
+                top: 5%;
+                left: 10%;
+            }
+        }
+
+        @keyframes move-random-2 {
+            0% {
+                top: 15%;
+                left: 20%;
+            }
+            25% {
+                top: 50%;
+                left: 80%;
+            }
+            50% {
+                top: 75%;
+                left: 40%;
+            }
+            75% {
+                top: 25%;
+                left: 10%;
+            }
+            100% {
+                top: 15%;
+                left: 20%;
+            }
+        }
+
+        @keyframes move-random-3 {
             0% {
                 top: 10%;
                 left: 5%;
             }
             25% {
-                top: 30%;
-                left: 80%;
+                top: 40%;
+                left: 60%;
             }
             50% {
                 top: 70%;
-                left: 40%;
+                left: 30%;
             }
             75% {
-                top: 20%;
-                left: 15%;
+                top: 30%;
+                left: 90%;
             }
             100% {
                 top: 10%;
@@ -122,75 +159,70 @@
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
         }
-
-        .neon-border {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 4px double transparent;
-            border-radius: 20px;
-            background-image: linear-gradient(#0d0d0d, #0d0d0d), linear-gradient(135deg, #ff0080, #33ccff);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-            color: white;
-            font-size: 1.2rem;
+    .floating-text {
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff0080;
+            animation: float-text 10s infinite ease-in-out;
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
+        @keyframes float-text {
+            0% {
+                top: 10%;
+                left: 5%;
             }
-
-            .links a {
-                font-size: 0.9rem;
-                padding: 8px 16px;
+            25% {
+                top: 30%;
+                left: 70%;
             }
-
-            .cat-image {
-                width: 100px;
+            50% {
+                top: 60%;
+                left: 40%;
             }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
+            75% {
+                top: 40%;
+                left: 20%;
             }
-
-            .links a {
-                font-size: 0.8rem;
-                padding: 6px 12px;
-            }
-
-            .cat-image {
-                width: 80px;
+            100% {
+                top: 10%;
+                left: 5%;
             }
         }
-    </style>
+        </style>
 </head>
 <body>
     <div id="particles-js"></div>
+    <div class="floating-text">DON'T LET ME CATCH U FAPPING</div>
     <h1>FAPPA ($FAPPA)</h1>
-    <p>Inspired by the Twitter cat that saw and heard too much.</p>
+    <p>Meet the legendary $FAPPA cats—masters of chaos and feline finesse, roaming the digital realm to spread memes, dreams, and mildly suspicious financial advice.</p>
     <div class="stats">
         <p>SUPPLY: 1B | LIQUIDITY: Locked | BURN: Active</p>
-        <p>CA: na  </p>
+        <p>CA: Placeholder (To Be Updated)</p>
     </div>
     <div class="links">
-        <a href="https://t.me/FAPPACOIN" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://x.com/C0RPSEGASM/status/1872454255086645464" target="_blank" rel="noopener">Twitter</a>
-        <a href="" target="_blank" rel="noopener">Chart</a>
+        <a href="https://t.me/placeholder" target="_blank">Telegram</a>
+        <a href="https://x.com/C0RPSEGASM/status/1872454255086645464" target="_blank">Twitter</a>
+        <a href="https://placeholder.com/chart" target="_blank">Chart</a>
     </div>
-    <img class="cat-image" src="https://pbs.twimg.com/media/GfxLOCpWYAACGDM?format=jpg&name=large" alt="Floating Cat">
+
+    <!-- Add multiple floating cat images -->
+    <img class="cat-image" src="https://pbs.twimg.com/media/GfxLOCpWYAACGDM?format=jpg&name=large" alt="Cute Cat">
+    <img class="cat-image-2" src="https://pbs.twimg.com/media/GfxLOCpWYAACGDM?format=jpg&name=large" alt="Cute Cat">
+    <img class="cat-image-3" src="https://pbs.twimg.com/media/GfxLOCpWYAACGDM?format=jpg&name=large" alt="Cute Cat">
+
     <footer>
         &copy; 2025 FAPPA. All rights reserved. | This is not financial advice. DYOR.
     </footer>
+
+    <!-- Add the script for particles.js -->
     <script>
         particlesJS('particles-js', {
             "particles": {
-                "number": { "value": 150 },
+                "number": { "value": 100 },
                 "size": { "value": 3 },
-                "move": { "speed": 2 },
-                "line_linked": { "enable": true, "distance": 150 },
-                "color": { "value": "#ff33aa" }
+                "move": { "speed": 1 },
+                "line_linked": { "enable": true, "distance": 150 }
             }
         });
     </script>
